@@ -60,10 +60,6 @@ public class IslandTextureGenerator
         {
             HeightTexture = ImageFiltering.ApplyBilateralFilter(HeightTexture, heightMapParameters.blurKernalSize, heightMapParameters.spatialBlurWeight, heightMapParameters.intensityBlurWeight);
         }
-        if(heightMapParameters.saveGeneratedTexture)
-        {
-            TrySaveTexture(HeightTexture, heightMapParameters.fileDirectory, heightMapParameters.filename);
-        }
 
         Texture2D MoistureTexture = SimplexNoiseGenerator.GenerateSimplexTexture(dimensions.x, dimensions.y, moistureMapParameters.seed,
             moistureMapParameters.lacunarity, moistureMapParameters.persistance, moistureMapParameters.scale);
@@ -119,7 +115,12 @@ public class IslandTextureGenerator
         JobHandle jobHandle2 = generateIslandJob.Schedule(dimensions.x * dimensions.y, 64);
         jobHandle2.Complete();
 
-        if(smoothBiomes)
+        if (heightMapParameters.saveGeneratedTexture)
+        {
+            TrySaveTexture(HeightTexture, heightMapParameters.fileDirectory, heightMapParameters.filename);
+        }
+
+        if (smoothBiomes)
         {
             NativeParallelHashMap<int, int> keyValues = new NativeParallelHashMap<int, int>(8, Allocator.Persistent);
             SmoothNeighborsJob smoothNeighborsJob = new SmoothNeighborsJob
@@ -379,6 +380,16 @@ public class IslandTextureGenerator
 
             //----------------We must subtract out the Square gradient value from the pixel intensity------------------------------
             int y = (int)math.round(GraphDimensions.y * (GetPixelIntensity(heightMap[i]) - GetPixelIntensity(squareGradient[i])));
+            
+            //We will apply the subtraction to the height map here in case the use saves the png
+            
+            heightMap[i] = new Color32( 
+                (byte)math.clamp(heightMap[i].r - squareGradient[i].r, 0, 255),
+                (byte)math.clamp(heightMap[i].g - squareGradient[i].g, 0, 255),
+                (byte)math.clamp(heightMap[i].b - squareGradient[i].b, 0, 255),
+                255
+                );
+            
             y = math.clamp(y, 0, GraphDimensions.y - 1);
 
             y = y >= GraphDimensions.y ? GraphDimensions.y - 1 : y;

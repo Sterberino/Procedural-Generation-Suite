@@ -595,3 +595,23 @@ public class CellularAutomataGenerator
 
 
 }
+
+
+/// <summary>
+/// Represents tiles that are placed using Cellular Automata and the Cellular Automata Rules.
+/// </summary>
+[System.Serializable]
+public class CellularAutomataRules
+{
+    public string seed;
+
+    public int iterationCount = 5;
+    [Tooltip("How much of the area should be filled with cellular automata values.")]
+    public int fillPercent = 34;
+    [Tooltip("pixels with more 'false' neighbors than this bound are replaced with 'false.'")]
+    public int lowerBoundRule = 4;
+    [Tooltip("pixels with more 'true' neighbors than this bound are replaced with 'true.'")]
+    public int upperBoundRule = 4;
+
+    public CellularAutomataGenerator.BorderRule borderRule = CellularAutomataGenerator.BorderRule.StripBorder;
+}

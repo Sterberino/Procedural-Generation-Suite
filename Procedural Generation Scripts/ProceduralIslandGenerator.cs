@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using Unity.EditorCoroutines.Editor;
 using UnityEngine.Tilemaps;
 
+[RequireComponent(typeof(Image))]
 public class ProceduralIslandGenerator : MonoBehaviour
 {
     /// <summary>
@@ -26,7 +27,7 @@ public class ProceduralIslandGenerator : MonoBehaviour
     /// </summary>
     [Tooltip("This biome is placed in the event a pixel color cannot be mapped to a biome.")]
     public Biome DefaultBiome;
-    public Image islandImage;
+    private Image islandImage;
 
     [Space]
     [Space]
@@ -95,13 +96,14 @@ public class ProceduralIslandGenerator : MonoBehaviour
         if (islandImage == null)
         {
             islandImage = GetComponent<Image>();
-        }
-        if(islandImage != null)
-        {
-            islandImage.sprite = Sprite.Create(islandTexture, new Rect(0, 0, islandTexture.width, islandTexture.height), Vector2.zero, 32);
-            islandImage.rectTransform.sizeDelta = new Vector2(islandTexture.width, islandTexture.height);
-        }
-    
+            if(islandImage == null)
+            {
+                islandImage = gameObject.AddComponent<Image>();
+            }
+        }     
+        islandImage.sprite = Sprite.Create(islandTexture, new Rect(0, 0, islandTexture.width, islandTexture.height), Vector2.zero, 32);
+        islandImage.rectTransform.sizeDelta = new Vector2(islandTexture.width, islandTexture.height);
+
     }
 
     public void PlaceIsland()

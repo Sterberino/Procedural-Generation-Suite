@@ -63,6 +63,8 @@
   
   <br/>
   </div>
+  
+  <h2> </h2>
   <p >When you are ready, click the Generate Island Texture Button. If you have elected to save the noise textures, they will be saved at this time. Then, you can place the tiles and the gameobjects in the scene referencing the texture by pressing "Place Island."</p>
   
   

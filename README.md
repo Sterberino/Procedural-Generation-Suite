@@ -65,3 +65,9 @@
   <p>When you are ready, click the Generate Island Texture Button. If you have elected to save the noise textures, they will be saved at this time. Then, you can place the tiles and the gameobjects in the scene referencing the texture by pressing "Place Island."</p>
   
   
+<h2>Things to Note:</h2>
+<ul>
+  <li>The tilemaps used by the procedural island generator must be sorted by their tilemap renderer's sorting order, in ascending order.</li>  
+  <li>Do not run the Island Generation script in quick succession. I haven't added protection against spam clicking.</li>
+  <li>Please enjoy this code to the fullest!</li>
+</ul>

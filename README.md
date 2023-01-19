@@ -1,7 +1,7 @@
 # Procedural-Generation-Suite
 
 <h1>Introduction</h1>
-<p>This is collection of precedural generation scripts intended to be used as as a base for 2D tile-based Unity games. in order to use these scripts, you must have the follorwing packages installed in your project:</p>
+<p>This is collection of precedural generation scripts intended to be used as as a base for 2D tile-based Unity games. It makes use of Unity's Job system, which allows for Safe multithreaded code, and Unity's Burst compiler which translates from IL/. NET bytecode to highly optimized native code using LLVM. in order to use these scripts, you must have the follorwing packages installed in your project:</p>
 
 <ul>
   <li>Editor Coroutines</li>

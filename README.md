@@ -50,7 +50,7 @@
   <br/>
   
 <h2>Biome Saved Noise Images</h2>
-<div>
+
 <table align = "center">
   <tr>
     <td>The heightmap</td>
@@ -60,11 +60,11 @@
     <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Height%20Noise%20Texture.png" width = 300 align = "center"/> </td>
     <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Moisture%20Noise%20Texture.png" width = 300 align = "center"/></td>
   </tr>
-  
+ </table>
   <br/>
-  </div>
+
   
   <h2> </h2>
-  <p >When you are ready, click the Generate Island Texture Button. If you have elected to save the noise textures, they will be saved at this time. Then, you can place the tiles and the gameobjects in the scene referencing the texture by pressing "Place Island."</p>
+  <p>When you are ready, click the Generate Island Texture Button. If you have elected to save the noise textures, they will be saved at this time. Then, you can place the tiles and the gameobjects in the scene referencing the texture by pressing "Place Island."</p>
   
   

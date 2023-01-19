@@ -3,7 +3,7 @@ A collection of procedural generation scripts for use in Unity3D, written in C#.
 
 
 
-<div align = "center" align = "center" width = 400 height = 400>
+<div align = "center" align = "center" width = 800 height = 800 >
   <h3 align = "center">  
     Generated Image
     <br/>

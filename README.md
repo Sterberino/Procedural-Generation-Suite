@@ -20,7 +20,7 @@
     <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Island%20Result.png" width = 300 height = 300 align = "center"/></td>
   </tr>
   <tr>
-    <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Texture%20result.png" align = "center"/> </td>
-    <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Tilemap%20result.png" align = "center"/></td>
+    <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Texture%20result.png" width = 50% align = "center"/> </td>
+    <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Tilemap%20result.png" width = 50% align = "center"/></td>
   </tr>
  </table>

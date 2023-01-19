@@ -50,6 +50,7 @@
   <br/>
   
 <h2>Biome Saved Noise Images</h2>
+<div>
 <table align = "center">
   <tr>
     <td>The heightmap</td>
@@ -61,7 +62,7 @@
   </tr>
   
   <br/>
-  
-  <p>When you are ready, click the Generate Island Texture Button. If you have elected to save the noise textures, they will be saved at this time. Then, you can place the tiles and the gameobjects in the scene referencing the texture by pressing "Place Island."</p>
+  </div>
+  <p >When you are ready, click the Generate Island Texture Button. If you have elected to save the noise textures, they will be saved at this time. Then, you can place the tiles and the gameobjects in the scene referencing the texture by pressing "Place Island."</p>
   
   

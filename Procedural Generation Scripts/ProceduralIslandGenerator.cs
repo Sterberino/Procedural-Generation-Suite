@@ -127,6 +127,10 @@ public class ProceduralIslandGenerator : MonoBehaviour
 
         foreach(PixelBiomeMap PBM in IslandBiomeMappings)
         {
+            if(ColorBiomeDictionary.ContainsKey(PBM.color))
+            {
+                Debug.LogWarning("You are attempting to map one Color to multiple biomes.");
+            }
             ColorBiomeDictionary.Add(PBM.color, PBM.biome);
         }
 

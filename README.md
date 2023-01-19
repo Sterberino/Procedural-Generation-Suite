@@ -1,7 +1,15 @@
 # Procedural-Generation-Suite
 
 <h1>Introduction</h1>
-<p>This is collection of precedural generation scripts intended to be used as as a base for 2D tile-based Unity games. It makes use of Unity's Job system, which allows for Safe multithreaded code, and Unity's Burst compiler which translates from IL/. NET bytecode to highly optimized native code using LLVM. in order to use these scripts, you must have the follorwing packages installed in your project:</p>
+<p>This is collection of precedural generation scripts intended to be used as as a base for 2D tile-based Unity games. It makes use of Unity's Job system, which allows for Safe multithreaded code, and Unity's Burst compiler which translates from IL/. NET bytecode to highly optimized native code using LLVM. The short version of what this does is as follows:</p>
+<ul>
+  <li>Two simplex noise textures are generated using Burst compiled Jobs.</li>
+  <li>Those simplex noise textures undergo multiple image filtering techniques depending on user specifications.</li>
+  <li>A separate Burst job then references one simplex texture to get an x coordinate, and the other to get a y coordinate.</li>
+  <li>That x and y coordinate maps to a texture (pix[x,y]) that defines the output pixel color.</li>
+</ul>
+ 
+<p>in order to use these scripts, you must have the follorwing packages installed in your project:</p>
 
 <ul>
   <li>Editor Coroutines</li>

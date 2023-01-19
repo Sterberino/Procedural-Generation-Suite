@@ -39,7 +39,7 @@
   
  </table>
  
- <h2>How to use<h2>
+ <h2>How to use</h2>
   
   <p>Your first order of business will be to add ProceduralIslandGenerator.cs as a component to a gameobject that has an Image component and is parented to a valid canvas. From there you will see an object field on the ProcerualIslandGenerator that takes a Texture2D reference. Add the Island Generator Moisture-Height Map.png to your project as a Texture2D and assign it as the ProcerualIslandGenerator's Moisture Height Graph variable.</p>
   <br/>
@@ -50,6 +50,7 @@
   <br/>
   <p>You will then map each pixel color found in the height moisture graph to a biome of your choice/ creation. If a color is not mapped to a biome, the assigned default biome will be placed. If no default biome is assigned, the tiles will be null (unassigned). You may experiment with different parameters for the height and moisture noise textures used to generate the island, and you will find interesting and varied end-results. If you wish to save the noise textures use for the island, assign a valid filename and filepath in the noise parameters, and check the bool to Save the image.</p> 
   
+  <br/>
   
 <h2 align>Biome Saved Noise Images</h2>
 <table align = "center">
@@ -62,6 +63,7 @@
     <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Moisture%20Noise%20Texture.png" width = 300 align = "center"/></td>
   </tr>
   
+  <br/>
   
   <p>When you are ready, click the Generate Island Texture Button. If you have elected to save the noise textures, they will be saved at this time. Then, you can place the tiles and the gameobjects in the scene referencing the texture by pressing "Place Island."</p>
   

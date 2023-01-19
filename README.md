@@ -26,18 +26,16 @@
   </tr>
  </table>
 
+<h2 align = "center">Biome Close-ups</h2>
 <table align = "center">
-  <tr>
-    <td>Biome close-ups</td>
-  </tr>
   <tr>
     <td>Sparse Forest Biome</td>
     <td>Dense Forest Biome</td>
   </tr>
   <tr>
-    <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Sparse%20Forest.png" width = 300 height = 300 align = "center"/> </td>
-    <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Dense%20Forest.png" width = 300 height = 300 align = "center"/></td>
+    <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Sparse%20Forest.png" width = 300 align = "center"/> </td>
+    <td><img src = "https://github.com/Sterberino/Procedural-Generation-Suite/blob/main/Images/Dense%20Forest.png" width = 300 align = "center"/></td>
   </tr>
   
  </table>
-<>
+
